@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Department>
+
+<div class="row">
+@foreach (var x in Model)
+{
+    <div class="card col-3" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@x.headOfDepartment</h5>
+            <p class="card-text">@x.title</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+}
+</div>

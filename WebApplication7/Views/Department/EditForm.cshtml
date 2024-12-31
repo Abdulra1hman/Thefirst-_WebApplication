@@ -1,0 +1,24 @@
+﻿@model Department
+
+<form asp-action="EditForm" asp-controller="Department" method="post">
+
+    <div class="mb-3">
+        <label for="title" class="form-label">title</label>
+        <input name="title" type="text" class="form-control" id="title" aria-describedby="emailHelp">
+        <span asp-validation-for="title"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="description" class="form-label">description</label>
+        <input name="description" type="text" class="form-control" id="description">
+        <span asp-validation-for="description"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="headOfDepartment" class="form-label">headOfDepartment</label>
+        <input name="headOfDepartment" type="text" class="form-control" id="headOfDepartment">
+        <span asp-validation-for="headOfDepartment"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

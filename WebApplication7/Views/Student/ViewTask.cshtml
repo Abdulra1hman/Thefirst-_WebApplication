@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Assigment>
+
+<table class="table">
+
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">title</th>
+            <th scope="col">Description</th>
+            <th scope="col">StarDate</th>
+            <th scope="col">EndDate</th>
+            <th scope="col">statues</th>
+            <th scope="col">departmentId</th>
+            <th scope="col">studentId</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr class="text-center">
+                <td>@x.Id</td>
+                <td>@x.title</td>
+                <td>@x.Description</td>
+                <td>@x.StarDate</td>
+                <td>@x.EndDate</td>
+                <td>@x.statues</td>
+                <td>@x.departmentId</td>
+                <td>@x.studentId</td>
+                <td>
+                    <a class="btn btn-primary btn-sm" href="@Url.Action("UpdateStatues","Student",new{id=x.Id})">Edit Statues</a>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>

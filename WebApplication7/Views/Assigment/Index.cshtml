@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Assigment>
+
+<a class="btn btn-primary btn-sm" href="@Url.Action("AddForm","Assigment")">GO TO ADD Assigment</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">title</th>
+            <th scope="col">Description</th>
+            <th scope="col">StarDate</th>
+            <th scope="col">EndDate</th>
+            <th scope="col">statues</th>
+            <th scope="col">departmentId</th>
+            <th scope="col">studentId</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <th scope="row">@x.Id</th>
+                <td>@x.title</td>
+                <td>@x.Description</td>
+                <td>@x.StarDate</td>
+                <td>@x.EndDate</td>
+                <td>@x.statues</td>
+                <td>@x.departmentId</td>
+                <td>@x.studentId</td>
+                <td>
+                    <a class="btn btn-dark btn-sm" href="@Url.Action("UpdateForm","Assigment",new{id=x.Id})">Update</a>
+                    <a class="btn btn-danger btn-sm" href="@Url.Action("Delete","Assigment",new{id=x.Id})">Delete</a>
+                </td>
+
+            </tr>
+        }
+
+    </tbody>
+</table>

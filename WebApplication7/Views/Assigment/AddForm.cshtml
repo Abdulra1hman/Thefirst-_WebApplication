@@ -1,0 +1,49 @@
+﻿@model Assigment
+
+<form asp-action="AddForm" asp-controller="Assigment" method="post">
+
+    <div class="mb-3">
+        <label for="title" class="form-label">title</label>
+        <input name="title" type="text" class="form-control" id="title" aria-describedby="emailHelp">
+        <span asp-validation-for="title"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="Description" class="form-label">Description</label>
+        <input name="Description" type="text" class="form-control" id="Description">
+        <span asp-validation-for="Description"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="StarDate" class="form-label">StarDate</label>
+        <input name="StarDate" type="text" class="form-control" id="StarDate">
+        <span asp-validation-for="StarDate"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="EndDate" class="form-label">EndDate</label>
+        <input name="EndDate" type="text" class="form-control" id="EndDate">
+        <span asp-validation-for="EndDate"></span>
+    </div>
+
+    <select name="statues">
+        <option value="Open">Open</option>
+        <option value="Panding">Panding</option>
+        <option value="Close">Close</option>
+    </select>
+
+    <div class="mb-3">
+        <label for="departmentId" class="form-label">departmentId</label>
+        <input name="departmentId" type="text" class="form-control" id="departmentId">
+        <span asp-validation-for="departmentId"></span>
+
+    </div>
+
+    <div class="mb-3">
+        <label for="studentId" class="form-label">studentId</label>
+        <input name="studentId" type="text" class="form-control" id="studentId">
+        <span asp-validation-for="studentId"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
