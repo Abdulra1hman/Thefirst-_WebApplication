@@ -15,4 +15,5 @@ namespace WebApplication7.Models
         [StringLength(250)]
         public string Email { get; set; }
     }
+    // hjk
 }
